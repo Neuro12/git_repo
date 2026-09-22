@@ -12,3 +12,5 @@ tblastn -query "$1" \
   > raw_hits.tsv
 
 awk '$3 > 30 && $5 > 0.9 * $4' raw_hits.tsv > "$3"≈
+
+wc -l < "$3"
