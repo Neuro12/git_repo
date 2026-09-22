@@ -14,4 +14,3 @@ tblastn -query "$1" \
 awk '$3 > 30 && $5 > 0.9 * $4' raw_hits.tsv > "$3"≈
 
 wc -l < "$3"
-# find homologs script
