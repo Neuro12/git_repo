@@ -10,3 +10,5 @@ tblastn -query "$1" \
   -subject "$2" \
   -outfmt "6 qseqid sseqid pident qlen length" \
   > raw_hits.tsv
+
+awk '$3 > 30 && $5 > 0.9 * $4' raw_hits.tsv > "$3"≈
